@@ -1,0 +1,29 @@
+<p>
+  <mat-toolbar>
+    <div
+      class="content"
+      fxLayout="row"
+      fxLayoutAlign="space-between"
+      fxFlexFill
+    >
+      <div fxLayout="col" gdColumns="auto" gdAlignColumns="center">
+        <a routerLink="">
+          <img src="./assets/logotipo.png" height="50px" />
+        </a>
+      </div>
+      <div fxLayout="col" gdColumns="auto" gdAlignColumns="center">
+        <button mat-icon-button [matMenuTriggerFor]="menu">
+          <mat-icon>more_vert</mat-icon>
+        </button>
+        <mat-menu #menu="matMenu">
+          <a routerLink="login">
+            <button mat-menu-item>Login</button>
+          </a>
+          <a routerLink="register">
+            <button mat-menu-item>Register</button>
+          </a>
+        </mat-menu>
+      </div>
+    </div>
+  </mat-toolbar>
+</p>
