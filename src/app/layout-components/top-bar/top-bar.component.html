@@ -16,52 +16,27 @@
           class="content"
           fxLayout="row"
           fxLayoutAlign="space-between"
+          fxLayoutGap="16px"
           fxFlexFill
         >
           <div fxLayout="col" gdColumns="auto" gdAlignColumns="center">
             <mat-form-field appearance="fill">
               <mat-label>Language</mat-label>
-              <mat-select
-                formControlName="language"
-                [(value)]="selectedLanguage"
-              >
+              <mat-select [(value)]="selectedLanguage">
                 <mat-select-trigger>
-                  <span
-                    *ngIf="selectedLanguage.flag == 'us'"
-                    class="fi fi-us fis"
-                  ></span>
-                  <span
-                    *ngIf="selectedLanguage.flag == 'br'"
-                    class="fi fi-br fis"
-                  ></span>
-                  <span
-                    *ngIf="selectedLanguage.flag == 'es'"
-                    class="fi fi-es fis"
-                  ></span>
-                  &nbsp;{{ selectedLanguage }}
+                  <span class="fi fi-{{ selectedLanguage.flag }} fis"></span>
+                  {{ selectedLanguage.label }}
                 </mat-select-trigger>
                 <mat-option
                   *ngFor="let language of languages"
-                  [value]="language.value"
+                  [value]="language"
                 >
-                  <span
-                    *ngIf="language.flag == 'us'"
-                    class="fi fi-us fis"
-                  ></span>
-                  <span
-                    *ngIf="language.flag == 'br'"
-                    class="fi fi-br fis"
-                  ></span>
-                  <span
-                    *ngIf="language.flag == 'es'"
-                    class="fi fi-es fis"
-                  ></span>
-                  &nbsp;{{ language.value }}
+                  <span class="fi fi-{{ language.flag }} fis"></span>
+                  &nbsp;{{ language.label }}
                 </mat-option>
               </mat-select>
             </mat-form-field>
           </div>
-          &nbsp; &nbsp;
           <div fxLayout="col" gdColumns="auto" gdAlignColumns="center">
             <a routerLink="login">
               <button mat-raised-button color="primary">Login</button>

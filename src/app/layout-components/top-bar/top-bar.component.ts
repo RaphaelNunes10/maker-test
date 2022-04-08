@@ -1,22 +1,17 @@
 import { Component, OnInit } from '@angular/core';
 
-interface Language {
-  flag: string;
-  value: string;
-}
-
 @Component({
   selector: 'app-top-bar',
   templateUrl: './top-bar.component.html',
   styleUrls: ['./top-bar.component.css'],
 })
 export class TopBarComponent implements OnInit {
-  selectedLanguage: Language = { flag: '', value: '' };
-  languages: Language[] = [
-    { flag: 'us', value: 'English' },
-    { flag: 'br', value: 'Portugês' },
-    { flag: 'es', value: 'Español' },
+  languages = [
+    { flag: 'us', label: 'English', value: 0 },
+    { flag: 'br', label: 'Portugês', value: 1 },
+    { flag: 'es', label: 'Español', value: 2 },
   ];
+  selectedLanguage = this.languages[0];
 
   constructor() {}
 
