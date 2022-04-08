@@ -9,6 +9,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FlexLayoutModule } from '@angular/flex-layout';
 
 import { MatIconModule } from '@angular/material/icon';
+import { MatSelectModule } from '@angular/material/select';
 import { MatButtonModule } from '@angular/material/button';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatMenuModule } from '@angular/material/menu';
@@ -35,6 +36,7 @@ import { FooterComponent } from './layout-components/footer/footer.component';
     FlexLayoutModule,
 
     MatIconModule,
+    MatSelectModule,
     MatButtonModule,
     MatToolbarModule,
     MatMenuModule,

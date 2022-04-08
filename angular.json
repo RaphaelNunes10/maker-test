@@ -23,8 +23,16 @@
             "polyfills": "src/polyfills.ts",
             "tsConfig": "tsconfig.app.json",
             "assets": ["src/favicon.ico", "src/assets"],
-            "styles": ["src/custom-theme.scss", "src/styles.css"],
-            "scripts": []
+            "styles": [
+              "src/custom-theme.scss",
+              "src/styles.css",
+              "node_modules/flag-icons/css/flag-icons.css",
+              "node_modules/flag-icons/css/flag-icons.min.css"
+            ],
+            "scripts": [
+              "node_modules/flag-icons/country.json",
+              "node_modules/flag-icons/package.json"
+            ]
           },
           "configurations": {
             "production": {
