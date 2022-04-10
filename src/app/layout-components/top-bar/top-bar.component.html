@@ -1,49 +1,39 @@
-<p>
-  <mat-toolbar>
-    <div
-      class="content"
-      fxLayout="row"
-      fxLayoutAlign="space-between"
-      fxFlexFill
-    >
-      <div fxLayout="col" gdColumns="auto" gdAlignColumns="center">
-        <a routerLink="">
-          <img src="./assets/logotipo.png" height="50px" />
-        </a>
-      </div>
-      <div fxLayout="col" gdColumns="auto" gdAlignColumns="center">
-        <div
-          class="content"
-          fxLayout="row"
-          fxLayoutAlign="space-between"
-          fxLayoutGap="16px"
-          fxFlexFill
-        >
-          <div fxLayout="col" gdColumns="auto" gdAlignColumns="center">
-            <mat-form-field appearance="fill">
-              <mat-label>Language</mat-label>
-              <mat-select [(value)]="selectedLanguage">
-                <mat-select-trigger>
-                  <span class="fi fi-{{ selectedLanguage.flag }} fis"></span>
-                  {{ selectedLanguage.label }}
-                </mat-select-trigger>
-                <mat-option
-                  *ngFor="let language of languages"
-                  [value]="language"
-                >
-                  <span class="fi fi-{{ language.flag }} fis"></span>
-                  &nbsp;{{ language.label }}
-                </mat-option>
-              </mat-select>
-            </mat-form-field>
-          </div>
-          <div fxLayout="col" gdColumns="auto" gdAlignColumns="center">
-            <a routerLink="login">
-              <button mat-raised-button color="primary">Login</button>
-            </a>
-          </div>
+<mat-toolbar style="height: 100%" fxFlex="100vw">
+  <div fxLayout="row" fxLayoutAlign="space-between" fxFlexFill>
+    <div fxLayout="column" gdColumns="auto" gdAlignColumns="center">
+      <a routerLink="">
+        <img src="./assets/logotipo.png" height="50px" />
+      </a>
+    </div>
+    <div fxLayout="column" gdColumns="auto" gdAlignColumns="center">
+      <div
+        class="content"
+        fxLayout="row"
+        fxLayoutAlign="space-between"
+        fxLayoutGap="16px"
+        fxFlexFill
+      >
+        <div fxLayout="column" gdColumns="auto" gdAlignColumns="center">
+          <mat-form-field appearance="legacy">
+            <mat-label>Language</mat-label>
+            <mat-select [(value)]="selectedLanguage">
+              <mat-select-trigger>
+                <span class="fi fi-{{ selectedLanguage.flag }} fis"></span>
+                {{ selectedLanguage.label }}
+              </mat-select-trigger>
+              <mat-option *ngFor="let language of languages" [value]="language">
+                <span class="fi fi-{{ language.flag }} fis"></span>
+                &nbsp;{{ language.label }}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+        </div>
+        <div fxLayout="column" gdColumns="auto" gdAlignColumns="center">
+          <a routerLink="login">
+            <button mat-raised-button color="primary">Login</button>
+          </a>
         </div>
       </div>
     </div>
-  </mat-toolbar>
-</p>
+  </div>
+</mat-toolbar>

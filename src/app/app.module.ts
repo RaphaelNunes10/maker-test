@@ -14,6 +14,10 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatGridListModule } from '@angular/material/grid-list';
+import { MatCardModule } from '@angular/material/card';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+
 import { HomeComponent } from './page-components/home/home.component';
 import { LoginComponent } from './page-components/login/login.component';
 import { RegisterComponent } from './page-components/register/register.component';
@@ -41,6 +45,9 @@ import { FooterComponent } from './layout-components/footer/footer.component';
     MatToolbarModule,
     MatMenuModule,
     MatGridListModule,
+    MatCardModule,
+    MatFormFieldModule,
+    MatInputModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

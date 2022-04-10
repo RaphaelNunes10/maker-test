@@ -1,5 +1,13 @@
-<app-top-bar></app-top-bar>
-<div fxLayout="row" fxLayoutGap="16px" fxFlexFill>
-  <router-outlet></router-outlet>
+<div fxLayout="column" fxFlex="100vw">
+  <div fxLayout="row" fxFlex="12vh">
+    <app-top-bar></app-top-bar>
+  </div>
+  <div fxLayout="row" fxFlex="83vh">
+    <div class="page">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+  <div fxLayout="row" fxFlex="5vh">
+    <app-footer></app-footer>
+  </div>
 </div>
-<app-footer></app-footer>

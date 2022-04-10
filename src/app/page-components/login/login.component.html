@@ -1,1 +1,23 @@
-<p>login works!</p>
+<div fxLayout="row" fxLayoutAlign="center center" fxFill>
+  <div fxLayout="column" fxFlex="25%">
+    <h1 fxLayout="row" fxLayoutAlign="center center" fxFill>Login</h1>
+    <p>
+      <mat-card class="login-card" fxLayout="column" fxLayoutGap="25" fxFill>
+        <mat-form-field appearance="legacy" floatLabel="always" fxFlex="90%">
+          <mat-label>Username</mat-label>
+          <input matInput placeholder="Your Username" />
+          <mat-icon matSuffix>account_circle</mat-icon>
+        </mat-form-field>
+        <mat-form-field appearance="legacy" floatLabel="always" fxFlex="90%">
+          <mat-label>Password</mat-label>
+          <input matInput placeholder="Your Password" />
+          <mat-icon matSuffix>vpn_key</mat-icon>
+        </mat-form-field>
+      </mat-card>
+    </p>
+    <p fxLayout="row" fxLayoutAlign="center center" fxFill>
+      <button mat-raised-button color="primary">Login</button>
+    </p>
+    <p>Don't have an account? <a routerLink="/register">Register here.</a></p>
+  </div>
+</div>
