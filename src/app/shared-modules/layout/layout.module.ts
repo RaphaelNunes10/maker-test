@@ -9,10 +9,11 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatSelectModule } from '@angular/material/select';
 import { MatButtonModule } from '@angular/material/button';
 
-import { TopBarComponent } from './top-bar.component';
+import { TopBarComponent } from '../../layout-components/top-bar/top-bar.component';
+import { FooterComponent } from '../../layout-components/footer/footer.component';
 
 @NgModule({
-  declarations: [TopBarComponent],
+  declarations: [TopBarComponent, FooterComponent],
   imports: [
     CommonModule,
 
@@ -20,10 +21,10 @@ import { TopBarComponent } from './top-bar.component';
 
     FlexLayoutModule,
 
-    MatSelectModule,
     MatToolbarModule,
+    MatSelectModule,
     MatButtonModule,
   ],
-  exports: [TopBarComponent],
+  exports: [TopBarComponent, FooterComponent],
 })
-export class TopBarModule {}
+export class LayoutModule {}

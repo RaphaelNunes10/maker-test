@@ -5,12 +5,10 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
-import { TopBarModule } from './layout-components/top-bar/top-bar.module';
-import { FooterModule } from './layout-components/footer/footer.module';
+import { LayoutModule } from './shared-modules/layout/layout.module';
 
 import { HomeModule } from './page-components/home/home.module';
-import { LoginModule } from './page-components/login/login.module';
-import { RegisterModule } from './page-components/register/register.module';
+import { UserModule } from './shared-modules/user/user.module';
 
 import { FlexLayoutModule } from '@angular/flex-layout';
 
@@ -21,12 +19,10 @@ import { FlexLayoutModule } from '@angular/flex-layout';
     AppRoutingModule,
     BrowserAnimationsModule,
 
-    TopBarModule,
-    FooterModule,
+    LayoutModule,
 
     HomeModule,
-    LoginModule,
-    RegisterModule,
+    UserModule,
 
     FlexLayoutModule,
   ],
